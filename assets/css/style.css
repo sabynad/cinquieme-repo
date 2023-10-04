@@ -1,26 +1,44 @@
 /*---------------body--------------*/
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size: 20px;
+}
+
+body{
+    background-color: grey;
+}
+
+.main-container {
+    background-color: #fff;
 }
 
 /*-----------header----------------*/
+
+header {
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
 .logo{
-    display: flex;
+    display: block;
     margin: auto;
-    padding-bottom: 2%;
+
 }
 
 h1{
     color: #D9763D;
     text-align: center;
-    padding-bottom: 2%;
+    font-size: 3rem;
+    
 }
 
-li{
+nav li {
     border: 2px solid #F2F2F2;
     margin: 1px;
     background-color: #F2F2F2;
+    padding: 1rem 0;
 }
 
 ul{
@@ -29,6 +47,7 @@ ul{
     flex-direction: column;
     text-align: center;
     list-style: none;
+    font-weight: bolder;
 }
 
 a{
@@ -38,9 +57,12 @@ a{
 
 /*---------------------main---------------------*/
 
-.section{
+main { 
+    /* border: 2px solid red; */
+    width: 100%;
+}
+.section {
     
-    padding-top: 10%;
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -53,7 +75,7 @@ p{
 
 h2{
     text-align: center;
-    padding-bottom: 3%;
+    margin-bottom: 2rem;
 }
 
 .section-bas {
@@ -63,7 +85,6 @@ h2{
 
 footer{
     margin-top: 10%;
-    border-top: 1px solid grey;
 }
 
 footer p{
@@ -72,28 +93,43 @@ footer p{
 }
 
 
+
 /* -------------------------------- MEDIA QUERRY ---------------------------- */
 
-/* ---------------tablette---------------- */
+/* -------------------------------------tablette---------------------------- */
 @media screen and (min-width: 768px) {
 
-.section-bas{
+
+
+.main-container {
+    width: 95vw;
+    margin: 0 auto;
+}
+
+.section-bas {
     /* border:1px solid red ; */
+    
     display: flex;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
     margin-top: 5%;
+
 }
 
 .bloc-top{
     /* border:1px solid blue ; */
-    width: 30%;
+    width: 35%;
     padding: 5%;
-    margin-right: 10%;
+}
+.bloc-top li {
+    margin-left: 1.5rem;
 }
 
 .bloc-galerie{
     /* border:1px solid orange ; */
     padding: 5%;
-    width: 35%;
+    width: 55%;
 }
 
 h3{
@@ -103,35 +139,110 @@ h3{
 
   }
 
-/* -------------------ecran PC--------------- */
+/* ---------------------------------ecran PC------------------------------- */
 @media screen and (min-width: 1280px) {
 
-    header, main, footer{
-        margin-left: auto;
-        margin-right: auto;
-        width: 1280px;
+    /* header, main, footer{
+        margin: auto;
+        width: 80%;
         background-color: white;
-        padding: 0;
-        border: 2px solid red;
-        display: flex;
-        justify-content: flex-start; 
-    }
+        /* border: 2px solid red; */
+        /* display: flex;
+        justify-content: space-between; 
+        align-items: center; */
+    /* } */ 
     
-    footer{
-        margin-top: 0%;
+   
+/* -----------------header------------------ */
+    header{
+        display: flex;
+        /* padding-top: 2%; */
+        /* padding-bottom: 2%; */
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+    
     }
 
-    body{
-        background-color: grey;
-        border: 2px solid black;
+    .logo {
+        margin: 0;
+        margin-left: 1rem;
         
     }
+     h1{
+        /* border: 2px solid yellow; */
+        margin: auto;   
+        font-size: 2rem;    
+     }
 
-    header{
-        /* display: block;   */
+     nav{
+        /* margin-right: 5%; */
+        display: flex;
+        
+        border: 2px solid red;
+        width: 50%;
+        }
+    
+     ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+     }
+
+     li{
+        line-height: 1.5rem;
+     }
+     .logo-titre{
+        display: flex;
+     }
+
+     /* -----------------main------------------ */
+
+     main{
+        /* border: 2px solid red; */
+        display: flex;
+        padding: 0;
+     }
+     .section{
+        margin-left: 2rem;
+     }
+
+     h3{
+        /* text-align: center; */
+        border-bottom: 1px solid grey;
+     }
+
+    .section h2 {
+        margin-top: 4rem;
+        font-size: 1.5rem;
     }
 
-    
+     .section-bas{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        /* border: 1px solid red; */
+     }
+     .bloc-top{
+        width: 100%;
+        padding: 2rem;
+        border: solid 2px pink;
+        
+     }
+     .bloc-galerie{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid black;
+     }
+     .bloc-galerie img{
+        width: 18%;
+     }
+     
 
-    
+     footer {
+        text-align: center;
+        border-top: 1px solid grey;
+     }
+     
 } 
